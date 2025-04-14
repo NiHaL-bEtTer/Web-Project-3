@@ -16,7 +16,8 @@
     
     
     --form-bg: #FEF9E1;
-    --form-shdw: rgba(0, 0, 0, 0.1);
+    --form-shdw: rgba(0, 0, 0, 0.5);
+    --shadow: rgba(0, 0, 0, 0.5);
     
 }
 
@@ -34,6 +35,7 @@ html.dark-mode, body.dark-mode {
     --footer-color: #E5D0AC;        
     --toggle-bg: #6d2323;
     --form-bg: #1D1616;
-    --form-shdw: rgba(229, 208, 172, 0.1);
+    --form-shdw: rgba(229, 208, 172, 0.5);
+    --shadow:rgba(229, 208, 172, 0.5);
     
 }

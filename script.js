@@ -41,3 +41,11 @@ const toggleSwitch = document.getElementById('toggle');
 
         // calling the function to obeserve the sections
         sections.forEach(section => observer.observe(section)); //put section in the parameter
+
+
+
+        
+
+
+
+       

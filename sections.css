@@ -42,6 +42,7 @@ span { /*this is da css for the span*/
     height: 100%; /* sets the height to what ever related to what the width is without losing the ratio and dissorting the image*/
     border-radius: 8px;/*rounds the corners*/
     object-fit: cover;
+    box-shadow: var(--shadow);
     }
 
 .section.in-view {
@@ -107,3 +108,4 @@ iframe {
     border-radius: 8px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
+
