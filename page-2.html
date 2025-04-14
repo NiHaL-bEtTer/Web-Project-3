@@ -1,0 +1,166 @@
+<!--
+Name: Nihal Mrahar
+Course: Web-Dev 10S
+Teacher: Ms Hoitink
+School: Pembina trails Collegiate
+Date last Modified: 4/12/2025
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TreatyTrove</title>
+    <link rel="stylesheet" href="color-variables.css">
+    <link rel="stylesheet" href="nav.css">
+    <link rel="stylesheet" href="sections.css">
+    <link rel="stylesheet" href="forms.css">
+    <link rel="stylesheet" href="affects-n-mode-toggle.css">
+    <link rel="stylesheet" href="image-grid.css">
+    <!--yo this link the stylesheet-->
+    <link rel="icon" href="images/treaty-map-removebg-preview.png" type="image/jpg">
+    <script src="script.js" defer></script>
+    
+    <style>
+
+        html {
+            scroll-padding-top: 160px; 
+            font-size: 62.5%;
+            scroll-behavior: smooth;
+        } /*this is an interesting one, adds more padding when u scroll down, this is here because the nav bars take up alot of space and when u scroll down with the section links, it covers part of the section*/
+
+        body { /* default styles of the body*/
+            color: var(--body-color);
+            font-family: Arial, Helvetica, sans-serif;
+            background-color: var(--body-bg);
+            margin: 0;
+            padding-top: 80px; 
+            line-height: 1.6;
+            font-size: 1.6rem;
+            transition: background-color 0.5s ease, color 0.5s ease;
+        }
+
+
+        main { /*basic styles for the main*/
+            padding: 20px;
+            max-width: 1200px;
+            margin: 0 auto;
+            flex: 1;
+        }
+
+        h2 { /*basic styles for all h2*/
+            font-size: 36px;
+            color: var(--h2-color);
+            margin: 0 0 20px;
+            text-align: left; 
+            font-weight: bold; 
+        }
+
+        a { /*basic styles for the <a> inside the nav bar*/
+            display: inline-block;
+            color: var(--nav-color);
+            text-decoration: none; /*removes all text decorations*/
+            font-size: 16px;
+            font-weight: bold;
+            transition: transform 0.2s ease, text-shadow 0.2s;
+        }
+
+        a:hover { /*adds hover affect*/
+            
+            text-shadow: 0 0 8px #E5D0AC, 0 0 12px #E5D0AC;
+            transform: scale(1.1);
+        }   
+
+
+    </style>
+
+</head>
+<body>
+    <header> <!--this is the first part of the website, it containts the header and nav bar-->
+        <nav class="nav-bar">
+            <a href="index.html"><img class="treaty-icon" src="images/treaty-icon.jpg" alt="official treaty 1 logo "></a>
+            <a href="page-2.html"><h1 class="Main-Heading-Nav">TreatyTrove</h1></a><!--this refreshes the page -->
+            <ul>
+                <li class="list-styles"><a href="#section1" class="section-link">Implementation</a></li><!--these are links to the sections of the page-->
+                <li class="list-styles"><a href="#section2" class="section-link"> Informative Images</a></li>
+                <li class="list-styles"><a href="#section2" class="section-link">Back To Main</a></li>
+                
+            
+                
+                
+            </ul>
+            <div class="container" title="click to change between ilght and dark mode">
+                <input type="checkbox" id="toggle" >
+                <label for="toggle" class="mode-toggle"></label>
+            </div>
+        </nav>
+        <div class="decoration-bar"><!--this is the little red bar, only for decoration doesnt have any actual purpose-->
+            <p>Treaty #1</p>
+        </div>
+    </header>
+
+    <main><!--this is the main content of the website-->
+        <section id="section1" class="section" tabindex="1"><!--this is section 1-->
+            <h2>Implementation Of The Treaty Today</h2> <!--this is the heading for the section--> 
+            <div class="section-content"> <!--this is the div for all the info content n stuff of the section-->
+                <div class="info"><!--this div is the info, the text-->
+                    <p>
+                        Treaty 1, signed in 1871 between the Canadian government and several First Nations in southern Manitoba, continues to influence relationships today. 
+                        The Canadian government provides services like education, healthcare, and annual payments to First Nations communities as part of the treaty obligations.
+                        However, many Indigenous peoples feel that not all promises have been fully honored.
+                        Efforts are ongoing to improve these relationships through discussions and projects that aim to respect the original spirit of the treaty. 
+                        One significant development is the creation of Naawi-Oodena, an urban reserve in Winnipeg.
+                        This land was returned to Treaty 1 First Nations and is being developed into a community space with homes, businesses, and cultural centers.
+                        It's an example of how First Nations are working to reclaim land and build communities that reflect their needs and traditions. 
+                    </p>
+                    <a class="source" href="https://www.rcaanc-cirnac.gc.ca/eng/1360948213124/1544620003549" target="_blank">Read more about this</a> <!--this is the source for the info -->
+                </div> 
+                <div class="section-image"><!--this div is for stuff related to the image such as the source and the image itself-->
+                    <figure> <!--putting the image and fig caption in a figure-->
+                        <img src="images/treaty-1-map-close.png" alt="This is a map the canadian treaty lands"><!--the image-->
+                        <figcaption><a href="https://canadiangeographic.ca/articles/treaties-1-and-2-reflecting-on-the-150th-anniversary/" target="_blank">Link to the original image</a></figcaption> <!--the figcaption that contains the source of the image-->
+                    </figure>
+                    
+                </div>
+                
+            </div>
+        </section>
+
+        <section id="section2" class="section" tabindex="2"> <!--this is the 2nd sections-->
+            <h2>Informative images</h2>  <!-- this again is the heading-->
+
+                <div class="image-grid">
+                    
+                    
+                        <img src="images/signage.jpg" alt="this is a image of the canadian settlers and the aanishinabe peoples negoatiating treaty 1">
+                        <img src="images/signage.jpg" alt="this is a image of the canadian settlers and the aanishinabe peoples negoatiating treaty 1">
+                        <img src="images/signage.jpg" alt="this is a image of the canadian settlers and the aanishinabe peoples negoatiating treaty 1">
+                        <img src="images/signage.jpg" alt="this is a image of the canadian settlers and the aanishinabe peoples negoatiating treaty 1">
+                        <img src="images/signage.jpg" alt="this is a image of the canadian settlers and the aanishinabe peoples negoatiating treaty 1">
+                        <img src="images/signage.jpg" alt="this is a image of the canadian settlers and the aanishinabe peoples negoatiating treaty 1">
+
+
+            
+                </div>
+            </div>
+        </section>
+
+        
+        
+    </main>
+
+    <footer id="footer2" class="footer2"> <!--this footer has nothing in it, its onlt for decoration, this the red strip right above the actual footer -->
+        <a href="index copy.html">
+            Discover More
+        </a>
+    </footer>
+
+    <footer> <!--this is the actial footer-->
+        <p>&copy; 2025 Nihal is better. All rights reserved.</p>
+    </footer>
+
+    
+
+</body>
+</html>

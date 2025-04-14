@@ -1,0 +1,253 @@
+<!--
+Name: Nihal Mrahar
+Course: Web-Dev 10S
+Teacher: Ms Hoitink
+School: Pembina trails Collegiate
+Date last Modified: 4/12/2025
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TreatyTrove</title>
+    <link rel="stylesheet" href="color-variables.css">
+    <link rel="stylesheet" href="nav.css">
+    <link rel="stylesheet" href="sections.css">
+    <link rel="stylesheet" href="forms.css">
+    <link rel="stylesheet" href="affects-n-mode-toggle.css">
+    <!--yo this link the stylesheet-->
+    <link rel="icon" href="images/treaty-map-removebg-preview.png" type="image/jpg">
+    <script src="script.js" defer></script>
+    <style>
+
+        html {
+            scroll-padding-top: 160px; 
+            font-size: 62.5%;
+            scroll-behavior: smooth;
+        } /*this is an interesting one, adds more padding when u scroll down, this is here because the nav bars take up alot of space and when u scroll down with the section links, it covers part of the section*/
+
+        body { /* default styles of the body*/
+            color: var(--body-color);
+            font-family: Arial, Helvetica, sans-serif;
+            background-color: var(--body-bg);
+            margin: 0;
+            padding-top: 80px; 
+            line-height: 1.6;
+            font-size: 1.6rem;
+            transition: background-color 0.5s ease, color 0.5s ease;
+        }
+
+
+        main { /*basic styles for the main*/
+            padding: 20px;
+            max-width: 1200px;
+            margin: 0 auto;
+            flex: 1;
+        }
+
+        h2 { /*basic styles for all h2*/
+            font-size: 36px;
+            color: var(--h2-color);
+            margin: 0 0 20px;
+            text-align: left; 
+            font-weight: bold; 
+        }
+
+        a { /*basic styles for the <a> inside the nav bar*/
+            display: inline-block;
+            color: var(--nav-color);
+            text-decoration: none; /*removes all text decorations*/
+            font-size: 16px;
+            font-weight: bold;
+            transition: transform 0.2s ease, text-shadow 0.2s;
+        }
+
+        a:hover { /*adds hover affect*/
+            
+            text-shadow: 0 0 8px #E5D0AC, 0 0 12px #E5D0AC;
+            transform: scale(1.1);
+        }   
+
+
+    </style>
+
+</head>
+<body>
+    <header> <!--this is the first part of the website, it containts the header and nav bar-->
+        <nav class="nav-bar">
+            <a href="index.html"><img class="treaty-icon" src="images/treaty-icon.jpg" alt="official treaty 1 logo "></a>
+            <a href="index.html"><h1 class="Main-Heading-Nav">TreatyTrove</h1></a><!--this refreshes the page -->
+            <ul>
+                <li class="list-styles"><a href="#section1" class="section-link">Treaty 1</a></li><!--these are links to the sections of the page-->
+                <li class="list-styles"><a href="#section2" class="section-link">Terms</a></li>
+                <li class="list-styles"><a href="#section3" class="section-link">Reason</a></li>
+                <li class="list-styles"><a href="#section4" class="section-link">Indigenous Communities</a></li>
+                <li class="list-styles"><a href="#section5" class="section-link">Video</a></li>
+                <li class="list-styles"><a href="#section6" class="section-link">Discover More</a></li>
+                
+                
+            </ul>
+            <div class="container" title="click to change between ilght and dark mode">
+                <input type="checkbox" id="toggle" >
+                <label for="toggle" class="mode-toggle"></label>
+            </div>
+        </nav>
+        <div class="decoration-bar"><!--this is the little red bar, only for decoration doesnt have any actual purpose-->
+            <p>Treaty #1</p>
+        </div>
+    </header>
+
+    <main><!--this is the main content of the website-->
+        <section id="section1" class="section" tabindex="1"><!--this is section 1-->
+            <h2>Treaty 1</h2> <!--this is the heading for the section--> 
+            <div class="section-content"> <!--this is the div for all the info content n stuff of the section-->
+                <div class="info"><!--this div is the info, the text-->
+                    <p><span>Treaty 1</span> was signed on August 3, 1871 between the Canadian government and the Anishinaabe (Ojibwe) and the Swampy Cree first nations of southern Manitoba, this area covers present-day Winnipeg.
+                        It is the first of the numbered treaties in Canada, so it's unique because it set the pattern for what future treaties would look like.
+                        The treaty encompasses a huge portion of southern Manitoba.
+                        The Treaty included promises of reserves, farming tools, and annual payments.
+                        But the failure to fulfill many of those promises created problems for Indigenous communities.
+                        The map shows Treaty 1 lands situated in the Red River Valley near the U.S. border.  
+                    </p>
+                    <a class="source" href="https://www.rcaanc-cirnac.gc.ca/eng/1360948213124/1544620003549" target="_blank">Read more about this</a> <!--this is the source for the info -->
+                </div> 
+                <div class="section-image"><!--this div is for stuff related to the image such as the source and the image itself-->
+                    <figure> <!--putting the image and fig caption in a figure-->
+                        <img src="images/treaty-map-removebg-preview.png" alt="This is a map the canadian treaty lands"><!--the image-->
+                        <figcaption><a href="https://commons.wikimedia.org/wiki/File:Numbered-Treaties-Map.svg" target="_blank">Link to the original image</a></figcaption> <!--the figcaption that contains the source of the image-->
+                    </figure>
+                    
+                </div>
+            </div>
+        </section>
+
+        <section id="section2" class="section" tabindex="2"> <!--this is the 2nd sections-->
+            <h2>Terms</h2>  <!-- this again is the heading-->
+            <div class="section-content"> <!--this holds the content of the section-->
+                <div class="info"> <!--this info/text--> <!--im too lazy to do all the same comments, everything else is the same as the first section-->
+                    <p>The original terms in <span>Treaty 1</span> included various promises that the Canadian government made to the Anishinaabe and Swampy Cree nations.
+                        A reserve of 160 acres was to be given to each family of five and proportionately smaller families. 
+                        The government also promised farm implements, including plows and seeds, to assist families in growing crops, and annual payments of $3 per person.
+                        The other pledges were for schools on reserves, fishing and hunting rights, and assistance with farming and building housing.
+                        But, after the treaty had been signed, the government inserted secret clauses known as the “outside promises," which were never shared with the Indigenous leaders.
+                        Such clauses diminished or eliminated certain benefits promised, such as agricultural tools 
+                    </p>
+                    <a class="source" href="https://vantagepoints.ca/stories/treaties-manitoba/" target="_blank">Read More About This</a>
+                </div>
+                <div class="section-image">
+                    
+                    <figure>
+                        <img src="images/signage.jpg" alt="this is a image of the canadian settlers and the aanishinabe peoples negoatiating treaty 1">
+                        <figcaption><a href="https://nwmp.galtmuseum.com/chapters/first-nations-people-and-the-signing-of-the-treaties" target="_blank">Link to The Original image</a></figcaption>
+                    </figure>
+                </div>
+            </div>
+        </section>
+
+        
+        <section id="section3" class="section" tabindex="3"><!--this is the 3rd section of the website-->
+            <h2>Reason</h2> <!--everything else is the same as the first 2 sections-->
+            <div class="section-content">
+                <div class="info">
+                    <p> After tensions with USA rose, The canadian government wanted to expand its teritory.
+                        the government of Canada pressured the people living in the <span>Treaty 1</span> area to surrender land in southern Manitoba, to farm and settle.
+                        That was part of a plan to spread Canada west and connect the country by rail.
+                        They also wanted to prevent land disputes by entering into agreements with the Anishinaabe and Swampy Cree nations.
+                        But it did not fully respect Indigenous rights or keep many of its promises, damaging communities that had long lived on the land.
+                    </p>
+                    <a class="source" href="https://treaty1.ca/treaty-no-1/" target="_blank">Read More About This</a>
+                    
+                </div>
+                <div class="section-image">
+                    
+                    <figure>
+                        <img src="images/prairie-grasslands.jpg" alt="this is a scenic sunset image of the manitoban prarie grasslands, ">
+                        <figcaption><a href="https://www.manitobacooperator.ca/farm-it-manitoba/protecting-prairie-grasslands/" target="_blank">Link To The Original Image</a></figcaption>
+                    </figure>
+                </div>
+            </div>
+        </section>
+
+        
+        <section id="section4" class="section" tabindex="4"><!--this is the 4th section-->
+            <h2>Indigenous Communities</h2> <!--rest of the content is the same as the rest of the sections-->
+            <div class="section-content">
+                <div class="info">
+                    <p><span>Treaty 1</span> was with the Anishinaabe (Ojibwe) and Swampy Cree nations, Indigenous peoples with deep relationships to the land in southern Manitoba.
+                        Some of those communities include the Brokenhead Ojibway Nation, Sagkeeng First Nation and Long Plain First Nation. 
+                        These countries made a deal to share their land for promises including reserves, farming implements and annual payments. 
+                        But the treaty did not include the Métis people -- those of mixed Indigenous and European ancestry -- who also lived in the area.
+                        The Métis also had their own distinct cultur and language, Michif, and were impacted by the land and resource changes as well.
+                    </p>
+                    <a class="source" href="https://www.rcaanc-cirnac.gc.ca/eng/1360948213124/1544620003549" target="_blank">Read More About This</a>
+                </div>
+                <div class="section-image">
+                    
+                    <figure>
+                        <img src="images/metis-people.jpg" alt="this is a picture of Louis Riel and some other metis people getting a picture taken of them">
+                        <figcaption><a href="https://www.gallerieswest.ca/magazine/stories/manitoba%E2%80%99s-m%C3%A9tis-history/" target="_blank">Link To the Original Image</a></figcaption>
+                    </figure>
+                </div>
+            </div>
+        </section>
+
+
+        <section id="section5" class="section" tabindex="5"><!--this is the 5th section-->
+            <h2>Video</h2> <!--rest of the content is the same as the rest of the sections-->
+            <div class="section-content">
+                <div class="info">
+                    <p> This video furthermore explains what Treaty 1 Canada is All about
+                    </p>
+                    
+                    
+                    <form action="#section5" method="get">
+                        <fieldset>
+                            <legend>Opinion On This Website</legend>
+                            
+                            <label for="options">Rating:</label>
+                            <select id="options" name="options">
+                                <option value="option1">1</option>
+                                <option value="option2">2</option>
+                                <option value="option3">3</option>
+                                <option value="option4">4</option>
+                                <option value="option5">5</option>
+                            </select> </br>
+                        <button type="submit">Submit</button>
+
+                        </fieldset>
+                
+                    </form>
+                            
+                        
+                    
+                    
+                </div>
+                <div class="section-image">
+                    
+                    <figure>
+                        <iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/8O717cPRcf4?si=3Iv7YC49qW7ZHiFG" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                        <figcaption><a href="https://www.gallerieswest.ca/magazine/stories/manitoba%E2%80%99s-m%C3%A9tis-history/" target="_blank">Image Source</a></figcaption>
+                    </figure>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <div class="footer-container" id="section6">
+        <footer id="footer2" class="footer2"> <!--this footer has nothing in it, its onlt for decoration, this the red strip right above the actual footer -->
+            <a href="page-2.html" tabindex="6">
+                Discover More
+            </a>
+        </footer>
+    
+        <footer> <!--this is the actial footer-->
+            <p>&copy; 2025 Nihal is better. All rights reserved.</p>
+        </footer>
+    </div>
+
+    
+
+</body>
+</html>

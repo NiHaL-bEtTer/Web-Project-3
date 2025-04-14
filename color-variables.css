@@ -1,0 +1,39 @@
+:root {
+    /* Colors for light mode */
+    --body-bg: #FEF9E1;             
+    --body-color: #6D2323;         
+    --nav-bg: #6D2323;             
+    --nav-color: #E5D0AC;           
+    --decoration-bar-bg: #A31D1D;   
+    --decoration-bar-color: #FEF9E1; 
+    --h2-color: #6D2323;           
+    --footer-bg: #6D2323;           
+    --footer-color: #E5D0AC;        
+    
+    --toggle-bg: #A31d1d;
+    --toggle-knob-bg: #fef9e1;
+    
+    
+    
+    --form-bg: #FEF9E1;
+    --form-shdw: rgba(0, 0, 0, 0.1);
+    
+}
+
+
+html.dark-mode, body.dark-mode {
+    /* colors for dark mdoe */
+    --body-bg: #1D1616;             
+    --body-color: #E5D0AC;         
+    --nav-bg: #3E0b0b;     
+    --nav-color: #E5D0AC;          
+    --decoration-bar-bg: #6D2323;
+    --decoration-bar-color: #E5D0AC;      
+    --h2-color: #E5D0AC;           
+    --footer-bg: #3E0b0b; 
+    --footer-color: #E5D0AC;        
+    --toggle-bg: #6d2323;
+    --form-bg: #1D1616;
+    --form-shdw: rgba(229, 208, 172, 0.1);
+    
+}
