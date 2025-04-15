@@ -12,11 +12,11 @@ Date last Modified: 4/12/2025
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>TreatyTrove</title>
-    <link rel="stylesheet" href="color-variables.css">
-    <link rel="stylesheet" href="nav.css">
-    <link rel="stylesheet" href="sections.css">
-    <link rel="stylesheet" href="forms.css">
-    <link rel="stylesheet" href="affects-n-mode-toggle.css">
+    <link rel="stylesheet" href="CSS/color-variables.css">
+    <link rel="stylesheet" href="CSS/nav.css">
+    <link rel="stylesheet" href="CSS/sections.css">
+    <link rel="stylesheet" href="CSS/forms.css">
+    <link rel="stylesheet" href="CSS/affects-n-mode-toggle.css">
     <!--yo this link the stylesheet-->
     <link rel="icon" href="images/treaty-map-removebg-preview.png" type="image/jpg">
     <script src="script.js" defer></script>
@@ -26,6 +26,7 @@ Date last Modified: 4/12/2025
             scroll-padding-top: 160px; 
             font-size: 62.5%;
             scroll-behavior: smooth;
+            line-height: 140%;
         } /*this is an interesting one, adds more padding when u scroll down, this is here because the nav bars take up alot of space and when u scroll down with the section links, it covers part of the section*/
 
         body { /* default styles of the body*/
@@ -33,10 +34,11 @@ Date last Modified: 4/12/2025
             font-family: Arial, Helvetica, sans-serif;
             background-color: var(--body-bg);
             margin: 0;
-            padding-top: 80px; 
+            padding-top: 100px; 
             line-height: 1.6;
             font-size: 1.6rem;
             transition: background-color 0.5s ease, color 0.5s ease;
+            line-height: 140%;
         }
 
 
@@ -118,7 +120,7 @@ Date last Modified: 4/12/2025
                         But the failure to fulfill many of those promises created problems for Indigenous communities.
                         The map shows Treaty 1 lands situated in the Red River Valley near the U.S. border.  
                     </p>
-                    <a class="source" href="https://www.rcaanc-cirnac.gc.ca/eng/1360948213124/1544620003549" target="_blank">Read more about this</a> <!--this is the source for the info -->
+                    <a class="source" href="https://www.rcaanc-cirnac.gc.ca/eng/1360948213124/1544620003549" target="_blank">Read more about Treaty 1</a> <!--this is the source for the info -->
                 </div> 
                 <div class="section-image"><!--this div is for stuff related to the image such as the source and the image itself-->
                     <figure> <!--putting the image and fig caption in a figure-->
@@ -141,7 +143,7 @@ Date last Modified: 4/12/2025
                         But, after the treaty had been signed, the government inserted secret clauses known as the “outside promises," which were never shared with the Indigenous leaders.
                         Such clauses diminished or eliminated certain benefits promised, such as agricultural tools 
                     </p>
-                    <a class="source" href="https://vantagepoints.ca/stories/treaties-manitoba/" target="_blank">Read More About This</a>
+                    <a class="source" href="https://vantagepoints.ca/stories/treaties-manitoba/" target="_blank">Read More About Terms</a>
                 </div>
                 <div class="section-image">
                     
@@ -164,7 +166,7 @@ Date last Modified: 4/12/2025
                         They also wanted to prevent land disputes by entering into agreements with the Anishinaabe and Swampy Cree nations.
                         But it did not fully respect Indigenous rights or keep many of its promises, damaging communities that had long lived on the land.
                     </p>
-                    <a class="source" href="https://treaty1.ca/treaty-no-1/" target="_blank">Read More About This</a>
+                    <a class="source" href="https://treaty1.ca/treaty-no-1/" target="_blank">Read More About Reasons</a>
                     
                 </div>
                 <div class="section-image">
@@ -188,7 +190,7 @@ Date last Modified: 4/12/2025
                         But the treaty did not include the Métis people -- those of mixed Indigenous and European ancestry -- who also lived in the area.
                         The Métis also had their own distinct cultur and language, Michif, and were impacted by the land and resource changes as well.
                     </p>
-                    <a class="source" href="https://www.rcaanc-cirnac.gc.ca/eng/1360948213124/1544620003549" target="_blank">Read More About This</a>
+                    <a class="source" href="https://www.rcaanc-cirnac.gc.ca/eng/1360948213124/1544620003549" target="_blank">Read More About Indigenous Communities</a>
                 </div>
                 <div class="section-image">
                     
@@ -211,7 +213,7 @@ Date last Modified: 4/12/2025
                     
                     <form action="#section5" method="get">
                         <fieldset>
-                            <legend>Opinion On This Website</legend>
+                            <legend> Rate Our Website To Help Us Improve</legend>
                             
                             <label for="options">Rating:</label>
                             <select id="options" name="options">
@@ -220,7 +222,9 @@ Date last Modified: 4/12/2025
                                 <option value="option3">3</option>
                                 <option value="option4">4</option>
                                 <option value="option5">5</option>
-                            </select> </br>
+                            </select> 
+                            
+
                         <button type="submit">Submit</button>
 
                         </fieldset>
@@ -234,8 +238,8 @@ Date last Modified: 4/12/2025
                 <div class="section-image">
                     
                     <figure>
-                        <iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/8O717cPRcf4?si=3Iv7YC49qW7ZHiFG" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-                        <figcaption><a href="https://www.gallerieswest.ca/magazine/stories/manitoba%E2%80%99s-m%C3%A9tis-history/" target="_blank">Image Source</a></figcaption>
+                        <iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/8O717cPRcf4?si=3Iv7YC49qW7ZHiFG" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen  title="this video futhermore explaines details of Treaty 1 Manitoba Canada"></iframe>
+                        <figcaption><a href="https://youtu.be/8O717cPRcf4" target="_blank">Click To Watch Video Above On Youtube</a></figcaption>
                     </figure>
                 </div>
             </div>

@@ -1,0 +1,347 @@
+
+:root {
+    /* Colors for light mode */
+    --body-bg: #FEF9E1;             /* Light background */
+    --body-color: #6D2323;          /* Dark red text */
+    --nav-bg: #6D2323;              /* Light mode nav background */
+    --nav-color: #E5D0AC;           /* Nav text/light links */
+    --decoration-bar-bg: #A31D1D;    /* Decoration bar background */
+    --decoration-bar-color: #FEF9E1; /* Decoration bar text */
+    --h2-color: #6D2323;           /* Heading text color */
+    --footer-bg: #6D2323;           /* Footer background (light mode) */
+    --footer-color: #E5D0AC;        /* Footer text */
+    /* For the toggle switch (light mode) */
+    --toggle-bg: #A31d1d;
+    --toggle-knob-bg: #fef9e1;
+    /* Dark red value for dark mode elements */
+    
+    /* Form background in light mode */
+    --form-bg: #FEF9E1;
+    --form-shdw: rgba(0, 0, 0, 0.1);
+    
+}
+
+
+body.dark-mode {
+    /* Override variables for dark mode */
+    --body-bg: #1D1616;             /* Dark background */
+    --body-color: #E5D0AC;          /* Force golden text */
+    --nav-bg: #3E0b0b;     /* Use dark red for nav background */
+    --nav-color: #E5D0AC;           /* All text in nav becomes golden */
+    --decoration-bar-bg: #6D2323; /* Dark red for decoration bar */
+    --decoration-bar-color: #E5D0AC;      /* Decoration bar text golden */
+    --h2-color: #E5D0AC;           /* Headings in dark mode */
+    --footer-bg: #3E0b0b; /* Footer in dark mode */
+    --footer-color: #E5D0AC;        /* Footer text golden */
+    /* Toggle button dark overrides (if desired) */
+    --toggle-bg: #6d2323;
+    /* Form background in dark mode */
+    --form-bg: #1D1616;
+    --form-shdw: rgba(229, 208, 172, 0.1);
+    
+}
+
+
+html {
+    scroll-padding-top: 160px; 
+    font-size: 62.5%;
+    scroll-behavior: smooth;
+} /*this is an interesting one, adds more padding when u scroll down, this is here because the nav bars take up alot of space and when u scroll down with the section links, it covers part of the section*/
+
+body { /* default styles of the body*/
+    color: var(--body-color);
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: var(--body-bg);
+    margin: 0;
+    padding-top: 80px; 
+    line-height: 1.6;
+    font-size: 1.6rem;
+    transition: background-color 0.5s ease, color 0.5s ease;
+}
+
+
+
+header { /*styles for the header,*/
+    position: fixed; /* makes the header pinned to the top of the website*/
+    top: 0; /* leaves 0 space at the top of the website so the header is at the very top*/
+    width: 100%; /*takes full width of the website*/
+    z-index: 100; /*high z index so it appears above everything else*/
+}
+
+.nav-bar { /*this is the css for the nav bar*/
+    display: flex; /*sets the display setting to flex (flexbox)*/
+    align-items: center; /*aligns the items to the center  (duhh)*/
+    background-color: var(--nav-bg);
+    padding: 10px 20px;
+    color: var(--nav-color);
+    height: 60px; 
+}
+
+.treaty-icon {/* basic styles for the treaty icon*/
+    height: 45px;
+    margin-right: 10px;
+}
+
+.Main-Heading-Nav { /* basic styles for the heading in the nav/ header*/
+    font-size: 24px;
+    margin: 0;
+    margin-right: auto; 
+    font-weight: bold;
+}
+
+.nav-bar ul { /*css for the unordered list, the section links in the nav*/
+    list-style: none; /*removes previous list styles*/
+    margin: 0;
+    padding: 0;
+    display: flex; /*again, sets diplay setting to flexbox*/
+    gap: 40px; /*sets the gap between the items inside the list*/
+    justify-content: center; /* centers the content horizontally*/ 
+    flex: 1; 
+}
+
+.nav-bar a { /*basic styles for the <a> inside the nav bar*/
+    display: inline-block;
+    color: var(--nav-color);
+    text-decoration: none; /*removes all text decorations*/
+    font-size: 16px;
+    font-weight: bold;
+    transition: transform 0.2s ease, text-shadow 0.2s;
+}
+
+.nav-bar a:hover { /*adds hover affect*/
+    
+    text-shadow: 0 0 8px #E5D0AC, 0 0 12px #E5D0AC;
+    transform: scale(1.1);
+}
+
+.section-link {
+    transition: transform 0.2s ease;
+}
+
+.section-link:hover {
+    transform: scale(1.1);
+}
+
+
+
+.decoration-bar { /*css for the decoration bar, this is similar to the nav bar,*/
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--decoration-bar-bg);
+    padding: 0px;
+    color: var(--decoration-bar-color);
+    position: fixed;
+    top: 78px; /*this has a top of 78 because this sets a space of 78 px above so it doesnt overlap the header*/
+    width: 100%;
+    z-index: 99;
+    height: 35px; 
+}
+
+main { /*basic styles for the main*/
+    padding: 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+    flex: 1;
+}
+
+h2 { /*basic styles for all h2*/
+    font-size: 36px;
+    color: var(--h2-color);
+    margin: 0 0 20px;
+    text-align: left; 
+    font-weight: bold; 
+}
+
+.section-content { /*styles for the content inside the section*/
+    display: grid; /*sets the display setting to grid so the stuff can get arranged as a grid*/
+    grid-template-columns: 1fr 1fr; /*this sets the grid to be in columns, the 1fr and 1fr determine how much of the website they take up; fr means all space available*/
+    gap: 30px; 
+    align-items: start; 
+}
+
+.info { /*this css aligns the info to the left*/
+    text-align: left;
+}
+
+.source { /*this just some basic css for the source link*/
+    text-decoration: none;
+    color: var(--body-color); /* using body text color (light red) for link color */
+    font-weight: bold;
+    justify-content: center;
+    font-size: 18px;
+}
+
+footer { /*basic styles for the footer*/
+    text-align: center;
+    padding: 20px;
+    background-color: var(--footer-bg);
+    color: var(--footer-color);
+    margin-top: 0px;
+}
+
+:focus-visible { /*this adds a focus, so basically when u tab through the website, it highlights the stuff, the - visible makes it so that the highlight only appears when u tab and not when u click the area*/
+    outline: 3px solid #A31D1D; 
+    border-radius: 5px;
+}
+
+/*this css is for the images' figcaption*/
+figure {
+    margin: 0; 
+    text-align: center; 
+}
+
+figcaption {
+    font-size: 17px; 
+    margin-top: 10px; 
+}
+
+figcaption a { /*styles for the <a> inside the figcaption*/
+    color: var(--body-color); 
+    text-decoration: none; 
+    font-weight: bold;
+}
+
+figcaption a:hover { /*when u hover over the fig caption, it underlines the text*/
+    text-decoration: underline; 
+}
+
+form { /*styles for the form*/
+    background-color: var(--form-bg);
+    padding: 20px;
+    border-radius: 10px;
+    max-width: 500px;
+    margin: 20px auto;
+    box-shadow: 0 4px 8px var(--form-shdw);
+
+}
+
+fieldset {
+    border: 2px solid var(--button-color); /* using button color for border */
+    padding: 20px;
+    border-radius: 10px;
+}
+
+legend {
+    font-size: 24px;
+    color: var(--button-color); /* using button color */
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+label {
+    font-size: 16px;
+    color: var(--button-color);
+    font-weight: bold;
+    margin-bottom: 8px;
+    display: block;
+}
+
+select {
+    width: 100%;
+    padding: 10px;
+    font-size: 16px;
+    border: 2px solid var(--select-border);
+    border-radius: 5px;
+    margin-bottom: 15px;
+    background-color: var(--select-bg);
+    color: var(--select-color);
+}
+
+select:focus {
+    outline: 3px solid #A31D1D;
+    border-color: #A31D1D;
+}
+
+button {
+    color: var(--button-color);
+    background-color: var(--button-bg);
+    padding: 10px 20px;
+    font-size: 16px;
+    font-weight: bold;
+    border-radius: 10px;
+    border: 2px solid var(--button-color);
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: var(--button-hover-bg);
+}
+
+button:focus {
+    outline: 3px solid var(--button-hover-bg);
+    border-radius: 5px;
+}
+
+iframe {
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/*-----------------------------------------------------------------
+   TOGGLE SWITCH STYLES for Dark/Light Mode
+-----------------------------------------------------------------*/
+.container input {
+    display: none;
+}
+
+/* Make the toggle smaller so it fits into the nav bar */
+.mode-toggle {
+    width: 50px;
+    height: 25px;
+    border-radius: 25px;
+    background-color: var(--toggle-bg);
+    cursor: pointer;
+    position: relative;
+    transition: 0.2s;
+}
+
+.mode-toggle:before {
+    position: absolute;
+    content: '';
+    background-color: var(--toggle-knob-bg);
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    top: 2.5px;
+    left: 2.5px;
+    transition: 0.2s;
+}
+
+input:checked + .mode-toggle {
+    background-color: var(--toggle-bg);
+}
+
+input:checked + .mode-toggle::before {
+    transform: translateX(25px);
+}
+
+body.dark-mode .footer2 {
+    background-color: #6D2323;
+}
+
+
+form fieldset,
+
+form select,
+form button {
+    border: 2px solid #6d2323; 
+}
+
+body.dark-mode form fieldset,
+
+body.dark-mode form select,
+body.dark-mode form button {
+    border: 2px solid #E5D0AC;
+}
+
+
+
+

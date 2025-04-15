@@ -1,0 +1,118 @@
+
+
+
+
+.section { /*this is the css for the sections*/
+    margin-bottom: 40px;
+    margin-top: 20px;
+    padding: 6px;
+    padding-bottom: 30px;
+    width: 100%;
+    border-bottom: 5px solid #6D2323;
+    transition: transform 0.2s ease;
+    transform: scale(1);
+    
+    
+    }
+
+
+.footer2 { /*this the css for the decoration footer*/
+    height: 3px;
+    background-color: #A31D1D;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    } 
+
+
+.footer2 a {
+    text-decoration: none;
+    font-weight: bold;
+    color: var(--footer-color);
+}
+
+
+
+span { /*this is da css for the span*/
+    font-weight: bold;
+    font-style: italic;
+    }
+.section-image img { /*this the css for the image in the div section image,*/
+    max-width: 100%; /*sets it to take up the entire widthe of the page*/
+    height: 100%; /* sets the height to what ever related to what the width is without losing the ratio and dissorting the image*/
+    border-radius: 8px;/*rounds the corners*/
+    object-fit: cover;
+    box-shadow: var(--shadow);
+    }
+
+.section.in-view {
+    transform: scale(1.05);
+    }
+
+
+
+.section-content { /*styles for the content inside the section*/
+    display: grid; /*sets the display setting to grid so the stuff can get arranged as a grid*/
+    grid-template-columns: 1fr 1fr; /*this sets the grid to be in columns, the 1fr and 1fr determine how much of the website they take up; fr means all space available*/
+    gap: 30px; 
+    align-items: start; 
+}
+
+.info { /*this css aligns the info to the left*/
+    text-align: left;
+}
+
+.source { /*this just some basic css for the source link*/
+    text-decoration: none;
+    color: var(--body-color); /* using body text color (light red) for link color */
+    font-weight: bold;
+    justify-content: center;
+    font-size: 18px;
+}
+
+footer { /*basic styles for the footer*/
+    text-align: center;
+    padding: 20px;
+    background-color: var(--footer-bg);
+    color: var(--footer-color);
+    margin-top: 0px;
+}
+
+:focus-visible { /*this adds a focus, so basically when u tab through the website, it highlights the stuff, the - visible makes it so that the highlight only appears when u tab and not when u click the area*/
+    outline: 3px solid #A31D1D; 
+    border-radius: 5px;
+}
+
+/*this css is for the images' figcaption*/
+figure {
+    margin: 0; 
+    text-align: center; 
+    display: inline-block;
+}
+
+figcaption {
+    font-size: 17px; 
+    margin-top: 10px; 
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+figcaption a { /*styles for the <a> inside the figcaption*/
+    color: var(--body-color); 
+    text-decoration: none; 
+    font-weight: bold;
+}
+
+figcaption a:hover { /*when u hover over the fig caption, it underlines the text*/
+    text-decoration: underline; 
+}
+
+iframe {
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border: 5px solid var(--body-color);
+}
+
+
+

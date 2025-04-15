@@ -12,12 +12,13 @@ Date last Modified: 4/12/2025
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>TreatyTrove</title>
-    <link rel="stylesheet" href="color-variables.css">
-    <link rel="stylesheet" href="nav.css">
-    <link rel="stylesheet" href="sections.css">
-    <link rel="stylesheet" href="forms.css">
-    <link rel="stylesheet" href="affects-n-mode-toggle.css">
-    <link rel="stylesheet" href="image-grid.css">
+    <link rel="stylesheet" href="CSS/color-variables.css">
+    <link rel="stylesheet" href="CSS/nav.css">
+    <link rel="stylesheet" href="CSS/sections.css">
+    <link rel="stylesheet" href="CSS/forms.css">
+    <link rel="stylesheet" href="CSS/affects-n-mode-toggle.css">
+    <link rel="stylesheet" href="CSS/image-grid.css">
+    
     <!--yo this link the stylesheet-->
     <link rel="icon" href="images/treaty-map-removebg-preview.png" type="image/jpg">
     <script src="script.js" defer></script>
@@ -35,7 +36,7 @@ Date last Modified: 4/12/2025
             font-family: Arial, Helvetica, sans-serif;
             background-color: var(--body-bg);
             margin: 0;
-            padding-top: 80px; 
+            padding-top: 100px; 
             line-height: 1.6;
             font-size: 1.6rem;
             transition: background-color 0.5s ease, color 0.5s ease;
@@ -84,11 +85,8 @@ Date last Modified: 4/12/2025
             <ul>
                 <li class="list-styles"><a href="#section1" class="section-link">Implementation</a></li><!--these are links to the sections of the page-->
                 <li class="list-styles"><a href="#section2" class="section-link"> Informative Images</a></li>
+                <li class="list-styles"><a href="#section3" class="section-link"> Interactive Experience</a></li>
                 <li class="list-styles"><a href="index.html" class="section-link">Back To Main</a></li>
-                
-            
-                
-                
             </ul>
             <div class="container" title="click to change between ilght and dark mode">
                 <input type="checkbox" id="toggle" >
@@ -132,22 +130,50 @@ Date last Modified: 4/12/2025
 
                 <div class="image-grid">
                     
+                    <figure>
+                        <img src="images/map-close-up.jpg" alt="this is a image of the canadian settlers and the aanishinabe peoples negoatiating treaty 1">
+                        <figcaption>hi</figcaption>
+                    </figure>
                     
-                        <img src="images/signage.jpg" alt="this is a image of the canadian settlers and the aanishinabe peoples negoatiating treaty 1">
+                    <figure>
                         <img src="images/southern-treaty-map.webp" alt="this is a image of the canadian settlers and the aanishinabe peoples negoatiating treaty 1">
+                        <figcaption>bye</figcaption>
+                    </figure>
+                    
+                    <figure>
                         <img src="images/treaty-1-celebration.avif" alt="this is a image of the canadian settlers and the aanishinabe peoples negoatiating treaty 1">
-                        <img src="images/signage.jpg" alt="this is a image of the canadian settlers and the aanishinabe peoples negoatiating treaty 1">
-                        <img src="images/signage.jpg" alt="this is a image of the canadian settlers and the aanishinabe peoples negoatiating treaty 1">
-                        <img src="images/signage.jpg" alt="this is a image of the canadian settlers and the aanishinabe peoples negoatiating treaty 1">
+                        <figcaption>no</figcaption>
+                    </figure>
+                        
+                    <figure>
+                        <img src="images/red-river.jpg" alt="this is a image of the canadian settlers and the aanishinabe peoples negoatiating treaty 1">
+                        <figcaption>yes</figcaption>
+                    </figure>
+                        
 
 
-            
+
                 </div>
             </div>
         </section>
 
 
-        
+        <section id="section3" class="section" tabindex="3"> <!--this is the 2nd sections-->
+            <h2>Interactive Experience</h2>  <!-- this again is the heading-->
+
+                <div class="">
+                    
+                    <iframe src="https://www.google.com/maps/embed?pb=!4v1744745288256!6m8!1m7!1sBnCbyo5GuWd5SsBS-2Ct6Q!2m2!1d50.11208801217111!2d-96.93152669141534!3f266.8090854412339!4f-0.17246482718522316!5f0.4000000000000002" width="1200" height="400" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                    <p>
+                        This Lets You Explore The Exact Place Treaty 1 Was Signed, Lower Fort Garry National Historic Site, Manitoba Canada. 
+                    </p>
+
+                    <a class="source" href="https://maps.app.goo.gl/pLaXKMF6vg5YTLWA7" target="blank">View This On google Maps</a>
+                </div>
+            </div>
+        </section>
+
+
     </main>
 
     <footer id="footer2" class="footer2"> <!--this footer has nothing in it, its onlt for decoration, this the red strip right above the actual footer -->

@@ -1,0 +1,74 @@
+
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+form { /*styles for the form*/
+    background-color: var(--form-bg);
+    padding: 20px;
+    border-radius: 10px;
+    max-width: 500px;
+    margin: 20px auto;
+    box-shadow: 0 4px 8px var(--form-shdw);
+
+}
+
+fieldset {
+    border: 2px solid var(--button-color); /* using button color for border */
+    padding: 20px;
+    border-radius: 10px;
+}
+
+legend {
+    font-size: 24px;
+    color: var(--button-color); /* using button color */
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+label {
+    font-size: 16px;
+    color: var(--button-color);
+    font-weight: bold;
+    margin-bottom: 8px;
+    display: block;
+}
+
+select {
+    width: 100%;
+    padding: 10px;
+    font-size: 16px;
+    border: 2px solid var(--select-border);
+    border-radius: 5px;
+    margin-bottom: 15px;
+    background-color: var(--select-bg);
+    color: var(--select-color);
+}
+
+select:focus {
+    outline: 3px solid #A31D1D;
+    border-color: #A31D1D;
+}
+
+button {
+    color: var(--button-color);
+    background-color: var(--button-bg);
+    padding: 10px 20px;
+    font-size: 16px;
+    font-weight: bold;
+    border-radius: 10px;
+    border: 2px solid var(--button-color);
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: var(--button-hover-bg);
+}
+
+button:focus {
+    outline: 3px solid var(--button-hover-bg);
+    border-radius: 5px;
+}
