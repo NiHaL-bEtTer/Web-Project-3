@@ -58,6 +58,16 @@ header { /*styles for the header,*/
     top: 78px; /*this has a top of 78 because this sets a space of 78 px above so it doesnt overlap the header*/
     width: 100%;
     z-index: 99;
-    height: 35px; 
+    height: 55px; 
     transition: transform 0.5s ease, opacity 0.5s ease;
+}
+
+.decoration-bar ul {
+    list-style: none; /*removes previous list styles*/
+    margin: 0;
+    padding: 0;
+    display: flex; /*again, sets diplay setting to flexbox*/
+    gap: 40px; /*sets the gap between the items inside the list*/
+    justify-content: center; /* centers the content horizontally*/ 
+    flex: 1; 
 }

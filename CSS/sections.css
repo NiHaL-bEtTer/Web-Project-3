@@ -112,6 +112,16 @@ iframe {
     border-radius: 8px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     border: 5px solid var(--body-color);
+    flex-shrink: 100px;
+    display: flex;
+    
+
+    
+}
+
+.interactive-experience {
+    width: 1200px;
+    height: 400px;
 }
 
 
