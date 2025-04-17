@@ -60,6 +60,7 @@ header { /*styles for the header,*/
     z-index: 99;
     height: 55px; 
     transition: transform 0.5s ease, opacity 0.5s ease;
+    
 }
 
 .decoration-bar ul {

@@ -44,22 +44,12 @@ const toggleSwitch = document.getElementById('toggle');
 
 
 
-        document.querySelectorAll('a.section-link').forEach(anchor => {
-            anchor.addEventListener('click', function (e) {
-                e.preventDefault();
-                
-                // Ensure that the section scrolls to the correct position
-                document.querySelector(this.getAttribute('href')).scrollIntoView({
-                    behavior: 'smooth',
-                    block: 'start' // Align to the top of the screen
-                });
-            });
-        });
-        
+
+        document.querySelectorAll('decoration-bar')
 
 
+            
 
-        
 
 
 

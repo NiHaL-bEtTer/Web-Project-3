@@ -18,7 +18,7 @@ Date last Modified: 4/12/2025
     <link rel="stylesheet" href="CSS/forms.css">
     <link rel="stylesheet" href="CSS/affects-n-mode-toggle.css">
     <!--yo this link the stylesheet-->
-    <link rel="icon" href="images/treaty-map-removebg-preview.png" type="image/jpg">
+    <link rel="icon" href="images/treaty-icon.svg" type="image/jpg">
     <script src="script.js" defer></script>
     <style>
 
@@ -88,20 +88,20 @@ Date last Modified: 4/12/2025
         <nav class="nav-bar">
             <a href="index.html"><img class="treaty-icon" src="images/treaty-icon.jpg" alt="official treaty 1 logo "></a>
             <a href="index.html"><h1 class="Main-Heading-Nav">TreatyTrove</h1></a><!--this refreshes the page -->
+            
             <ul>
-                
-                <li class="list-styles"><a href="index.html" class="section-link" id="next-page" >Homepage</a></li>
-                <li class="list-styles"><a href="page-2.html" class="section-link" id="next-page" >Discover More</a></li>
-                <li class="list-styles"><a href="" class="section-link" id="next-page" >Coming Soon</a></li>
-                
-                
+                <li class="list-styles"><a href="index.html" class="section-link">Homepage</a></li><!--these are links to the sections of the page-->
+                <li class="list-styles"><a href="page-2.html" class="section-link">Discover More</a></li>
+                <li class="list-styles"><a href="under-construction.html" class="section-link">Coming Soon</a></li>
+            
             </ul>
+
             <div class="container" title="click to change between ilght and dark mode">
                 <input type="checkbox" id="toggle" >
                 <label for="toggle" class="mode-toggle"></label>
             </div>
         </nav>
-        <div class="decoration-bar"><!--this is the little red bar, only for decoration doesnt have any actual purpose-->
+        <div class="decoration-bar" id="decoration-bar"><!--this is the little red bar, only for decoration doesnt have any actual purpose-->
             <ul>
                 <li class="list-styles"><a href="#section1" class="section-link">Treaty 1</a></li><!--these are links to the sections of the page-->
                 <li class="list-styles"><a href="#section2" class="section-link">Terms</a></li>
