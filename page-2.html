@@ -12,66 +12,54 @@ Date last Modified: 4/12/2025
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>TreatyTrove</title>
+     <!--yo this link the stylesheet-->
     <link rel="stylesheet" href="CSS/color-variables.css">
+    <link rel="stylesheet" href="CSS/basic-styles.css">
     <link rel="stylesheet" href="CSS/nav.css">
     <link rel="stylesheet" href="CSS/sections.css">
-    <link rel="stylesheet" href="CSS/forms.css">
     <link rel="stylesheet" href="CSS/affects-n-mode-toggle.css">
-    <link rel="stylesheet" href="CSS/image-grid.css">
     
-    <!--yo this link the stylesheet-->
-    <link rel="icon" href="images/treaty-icon.svg" type="image/jpg">
-    <script src="script.js" defer></script>
+   
+    <link rel="icon" href="images/treaty-icon.svg" type="image/jpg"> <!--add favicon-->
+    <script src="script.js" defer></script> <!--link to js-->
     
     <style>
-
-        html {
-            scroll-padding-top: 160px; 
-            font-size: 62.5%;
-            scroll-behavior: smooth;
-        } /*this is an interesting one, adds more padding when u scroll down, this is here because the nav bars take up alot of space and when u scroll down with the section links, it covers part of the section*/
-
-        body { /* default styles of the body*/
-            color: var(--body-color);
-            font-family: Arial, Helvetica, sans-serif;
-            background-color: var(--body-bg);
-            margin: 0;
-            padding-top: 100px; 
-            line-height: 1.6;
-            font-size: 1.6rem;
-            transition: background-color 0.5s ease, color 0.5s ease;
-        }
-
-
-        main { /*basic styles for the main*/
-            padding: 20px;
-            max-width: 1200px;
-            margin: 0 auto;
-            flex: 1;
-        }
-
-        h2 { /*basic styles for all h2*/
-            font-size: 36px;
-            color: var(--h2-color);
-            margin: 0 0 20px;
-            text-align: left; 
-            font-weight: bold; 
-        }
-
-        a { /*basic styles for the <a> inside the nav bar*/
-            display: inline-block;
-            color: var(--nav-color);
-            text-decoration: none; /*removes all text decorations*/
-            font-size: 16px;
-            font-weight: bold;
-            transition: transform 0.2s ease, text-shadow 0.2s;
-        }
-
-        a:hover { /*adds hover affect*/
             
-            text-shadow: 0 0 8px #E5D0AC, 0 0 12px #E5D0AC;
-            transform: scale(1.1);
-        }   
+            .image-grid {
+                            /*this displays images in image-grid in a grid layout, 2 things per row and they take all the space avaiable*/
+            display: grid;
+            grid-template-columns: 1fr 1fr ;
+            gap: 50px;
+            padding-bottom: 20px;
+            margin: 10px;
+            }
+
+            .image-grid img {  /* styles for the img inside image grid*/
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            overflow: hidden;
+            border: 3px solid var(--decoration-bar-bg);
+            padding: 0px;
+
+            }
+            .image-grid a {  /*rest are basic styles lol*/
+            width: 100%;
+            height: 100%;
+            }
+
+            .image-grid figcaption {
+            text-align: center;
+            margin-bottom: 25px;
+            }
+
+            .image-grid figure {
+            display: block;
+            padding: 20px;
+            padding-bottom: 0px;
+
+            }
+
 
 
     </style>
@@ -82,17 +70,17 @@ Date last Modified: 4/12/2025
         <nav class="nav-bar">
             <a href="index.html"><img class="treaty-icon" src="images/treaty-icon.jpg" alt="official treaty 1 logo "></a>
             <a href="page-2.html"><h1 class="Main-Heading-Nav">TreatyTrove</h1></a><!--this refreshes the page -->
-            <ul>
+            <ul> <!--this contains the links to the other pages in the website, main nav bar-->
                 <li class="list-styles"><a href="index.html" class="section-link">Homepage</a></li>
                 <li class="list-styles"><a href="page-2.html" class="section-link">Discover More</a></li>
                 <li class="list-styles"><a href="under-construction.html" class="section-link">Coming Soon</a></li>
             </ul>
-            <div class="container" title="click to change between ilght and dark mode">
+            <div class="container" title="click to change between ilght and dark mode"> <!-- button to toggle between light and  dark mode-->
                 <input type="checkbox" id="toggle" >
                 <label for="toggle" class="mode-toggle"></label>
             </div>
         </nav>
-        <div class="decoration-bar"><!--this is the little red bar, only for decoration doesnt have any actual purpose-->
+        <div class="decoration-bar"><!--secondary nav bar that contains hyperlinks to sections of the website-->
             <ul>
                 <li class="list-styles"><a href="#section1" class="section-link">Implementation</a></li><!--these are links to the sections of the page-->
                 <li class="list-styles"><a href="#section2" class="section-link"> Informative Images</a></li>

@@ -2,19 +2,19 @@
     display: none;
 }
 
-/* Make the toggle smaller so it fits into the nav bar */
+/* styles to make the toggle, lol, saw this on youtube, is a checkbox, not button */
 .mode-toggle {
     width: 50px;
     height: 25px;
     border-radius: 25px;
     background-color: var(--toggle-bg);
     cursor: pointer;
-    position: relative;
+    position: relative; /* this makes the position of the button flexible and not static, can be moved */
     transition: 0.2s;
 }
 
 .mode-toggle:before {
-    position: absolute;
+    position: absolute; /*makes it so that before clicked, its in its absolute position but then when clicked it becomes relative*/
     content: '';
     background-color: var(--toggle-knob-bg);
     width: 20px;
@@ -24,7 +24,7 @@
     left: 2.5px;
     transition: 0.2s;
 }
-
+/* more stuff for the effect*/
 input:checked + .mode-toggle {
     background-color: var(--toggle-bg);
 }
@@ -38,14 +38,14 @@ body.dark-mode .footer2 {
 }
 
 
-form fieldset,
+form fieldset, /* targets all of this stuff in the form, basic ahh style*/
 
 form select,
 form button {
     border: 2px solid #6d2323; 
 }
 
-body.dark-mode form fieldset,
+body.dark-mode form fieldset, /* again same shi*/
 
 body.dark-mode form select,
 body.dark-mode form button {

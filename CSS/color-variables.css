@@ -1,3 +1,22 @@
+
+/*colors used
+Light-Mode: 
+Primary:#6D2323, 
+Secondary: #A31D1D, 
+Light Neutral: #FEF9E1, 
+Darker Neutral: #E5D0AC*/
+
+/*Color Family: Monochromatic + warm neutrals and black for dark mode
+Reason I chose these Colors:
+In Indigenous Culture, Warmer Colors such as red are Affiliated with Ceremony and Tradition and I wanted that to reflect in the appearance of my website,
+with my color scheme with reds and beiges, I wanted to express the vast praries of manitoba  coming together with the red river.
+The Color red also hold significant   symbolic and spiritual meaning in indigenous culture as it represetns Life, blood and the spiti world
+This Serves The purpose of the client as It contains Cultutal presance and deep symbolic meaning to the area */
+
+/*I used A sans Serif Font because this website is meant for a grade 4-8 audience, generally, sans serif is easier to read for younger audiences/
+sans serif is also the more "modern" font which I believe is linked with progress and change, 
+This Ties perfectly in to the website as It is important that this website gives the message that the injustices faced by the indigenous peoples werent right and it is important that we move forward and acknowledge this to truly honour reconciliation*/
+
 :root {
     /* Colors for light mode */
     --body-bg: #FEF9E1;             

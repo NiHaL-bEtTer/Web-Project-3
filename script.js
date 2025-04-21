@@ -45,7 +45,7 @@ const toggleSwitch = document.getElementById('toggle');
 
 
 
-        document.querySelectorAll('decoration-bar')
+       
 
 
             

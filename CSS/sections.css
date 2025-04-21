@@ -110,23 +110,22 @@ figcaption a:hover { /*when u hover over the fig caption, it underlines the text
     text-decoration: underline; 
 }
 
-iframe {
+iframe { /* styles for iframe*/
     border-radius: 8px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     border: 5px solid var(--body-color);
     flex-shrink: 100px;
     display: flex;
     
-
     
 }
 
-.interactive-experience {
+.interactive-experience { /* specifically targets the interactive experience i framce*/
     width: 1200px;
     height: 400px;
 }
 
-.construction {
+.construction { /* basic styles*/
     display: flex;
     margin: 0px;
     padding: 0px;

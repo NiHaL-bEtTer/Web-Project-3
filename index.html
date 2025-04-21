@@ -5,6 +5,11 @@ Teacher: Ms Hoitink
 School: Pembina trails Collegiate
 Date last Modified: 4/12/2025
 -->
+<!--Grades this is meant for: 4-8, but better for 6-8-->
+
+
+
+
 
 <!DOCTYPE html>
 <html lang="en">
@@ -13,71 +18,86 @@ Date last Modified: 4/12/2025
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>TreatyTrove</title>
     <link rel="stylesheet" href="CSS/color-variables.css">
+    <link rel="stylesheet" href="CSS/basic-styles.css">
     <link rel="stylesheet" href="CSS/nav.css">
     <link rel="stylesheet" href="CSS/sections.css">
-    <link rel="stylesheet" href="CSS/forms.css">
     <link rel="stylesheet" href="CSS/affects-n-mode-toggle.css">
     <!--yo this link the stylesheet-->
     <link rel="icon" href="images/treaty-icon.svg" type="image/jpg">
     <script src="script.js" defer></script>
     <style>
-
-        html {
-            scroll-padding-top: 160px; 
-            font-size: 62.5%;
-            scroll-behavior: smooth;
-            line-height: 140%;
-        } /*this is an interesting one, adds more padding when u scroll down, this is here because the nav bars take up alot of space and when u scroll down with the section links, it covers part of the section*/
-
-        body { /* default styles of the body*/
-            color: var(--body-color);
-            font-family: Arial, Helvetica, sans-serif;
-            background-color: var(--body-bg);
-            margin: 0;
-            padding-top: 155px; 
-            line-height: 1.6;
-            font-size: 1.6rem;
-            transition: background-color 0.5s ease, color 0.5s ease;
-            line-height: 140%;
+        .container { /* basic styles, just centering*/
+            display: flex;
+            justify-content: center;
+            align-items: center;
         }
 
-
-        main { /*basic styles for the main*/
+        form { /*basic ah styles for form, again, using variable colors I created*/
+            background-color: var(--form-bg);
             padding: 20px;
-            max-width: 1200px;
-            margin: 0 auto;
-            flex: 1;
+            border-radius: 10px;
+            max-width: 500px;
+            margin: 20px auto;
+            box-shadow: 0 4px 8px var(--form-shdw);
+
         }
 
-        h2 { /*basic styles for all h2*/
-            font-size: 36px;
-            color: var(--h2-color);
-            margin: 0 0 20px;
-            text-align: left; 
-            font-weight: bold; 
+        fieldset {
+            border: 2px solid var(--button-color); /* basic styles for fieldset, using the button color for border */
+            padding: 20px;
+            border-radius: 10px;
         }
 
-        a { /*basic styles for the <a> inside the nav bar*/
-            display: inline-block;
-            color: var(--nav-color);
-            text-decoration: none; /*removes all text decorations*/
+        legend {
+            font-size: 24px;
+            color: var(--button-color); /* basic styles for the legend for the form */
+            font-weight: bold;
+            margin-bottom: 10px;
+        }
+
+        label {
+            font-size: 16px; /* again just basic styles*/
+            color: var(--button-color);
+            font-weight: bold;
+            margin-bottom: 8px;
+            display: block;
+        }
+
+        select { /* more basic styles, again using variable colors */
+            width: 100%;
+            padding: 10px;
+            font-size: 16px;
+            border: 2px solid var(--select-border);
+            border-radius: 5px;
+            margin-bottom: 15px;
+            background-color: var(--select-bg);
+            color: var(--select-color);
+        }
+
+        select:focus {
+            outline: 3px solid #A31D1D; /* styles when the select is in focus (when tabbed on)*/
+            border-color: #A31D1D;
+        }
+
+        button { /* basic styles again*/
+            color: var(--button-color);
+            background-color: var(--button-bg);
+            padding: 10px 20px;
             font-size: 16px;
             font-weight: bold;
-            transition: transform 0.2s ease, text-shadow 0.2s;
+            border-radius: 10px;
+            border: 2px solid var(--button-color);
+            cursor: pointer; /* makes the cursor a pointer */
+            transition: background-color 0.3s ease; /*this jit adds a transition*/
         }
 
-        a:hover { /*adds hover affect*/
-            
-            text-shadow: 0 0 8px #E5D0AC, 0 0 12px #E5D0AC;
-            transform: scale(1.1);
-        }   
-
-        img {
-            box-shadow: var(--shadow);
+        button:hover {
+            background-color: var(--button-hover-bg);
         }
-
-        figure {
-            box-shadow: var(--shadow);
+        /* these are for  when the button is in hover and when the button is in focus*/
+        button:focus {
+            outline: 3px solid var(--button-hover-bg);
+            border-radius: 5px;
         }
 
     </style>
@@ -90,18 +110,18 @@ Date last Modified: 4/12/2025
             <a href="index.html"><h1 class="Main-Heading-Nav">TreatyTrove</h1></a><!--this refreshes the page -->
             
             <ul>
-                <li class="list-styles"><a href="index.html" class="section-link">Homepage</a></li><!--these are links to the sections of the page-->
+                <li class="list-styles"><a href="index.html" class="section-link">Homepage</a></li><!--these are links of the page, takes you to the pages of the site-->
                 <li class="list-styles"><a href="page-2.html" class="section-link">Discover More</a></li>
                 <li class="list-styles"><a href="under-construction.html" class="section-link">Coming Soon</a></li>
             
             </ul>
 
-            <div class="container" title="click to change between ilght and dark mode">
+            <div class="container" title="click to change between ilght and dark mode"> <!--toggle button, triggers the js to change between light and dark mode-->
                 <input type="checkbox" id="toggle" >
                 <label for="toggle" class="mode-toggle"></label>
             </div>
         </nav>
-        <div class="decoration-bar" id="decoration-bar"><!--this is the little red bar, only for decoration doesnt have any actual purpose-->
+        <div  aria-label="Section-Links" class="decoration-bar" id="decoration-bar"><!--this has now been repurposed and now acts as a secondary nav bar, contains links to sections of the page-->
             <ul>
                 <li class="list-styles"><a href="#section1" class="section-link">Treaty 1</a></li><!--these are links to the sections of the page-->
                 <li class="list-styles"><a href="#section2" class="section-link">Terms</a></li>
@@ -119,7 +139,7 @@ Date last Modified: 4/12/2025
                 <div class="info"><!--this div is the info, the text-->
                     <p><span>Treaty 1</span> was signed on August 3, 1871 between the Canadian government and the Anishinaabe (Ojibwe) and the Swampy Cree first nations of southern Manitoba, this area covers present-day Winnipeg.
                         It is the first of the numbered treaties in Canada, so it's unique because it set the pattern for what future treaties would look like.
-                        The treaty encompasses a huge portion of southern Manitoba.
+                        The treaty takes up a huge portion of southern Manitoba.
                         The Treaty included promises of reserves, farming tools, and annual payments.
                         But the failure to fulfill many of those promises created problems for Indigenous communities.
                         The map shows Treaty 1 lands situated in the Red River Valley near the U.S. border.  
@@ -208,20 +228,20 @@ Date last Modified: 4/12/2025
 
 
         <section id="section5" class="section" tabindex="5"><!--this is the 5th section-->
-            <h2>Video</h2> <!--rest of the content is the same as the rest of the sections-->
+            <h2>Video</h2> <!-- this is a more unique sections-->
             <div class="section-content">
                 <div class="info">
                     <p> This video furthermore explains what Treaty 1 Canada is All about
                     </p>
                     
                     
-                    <form action="#section5" method="get">
-                        <fieldset>
-                            <legend> Rate Our Website To Help Us Improve</legend>
+                    <form action="#section5" method="get"> <!--this makes the form-->
+                        <fieldset><!--fieldset to group the stuff-->
+                            <legend> Rate Our Website To Help Us Improve</legend> <!--egend for da form-->
                             
                             <label for="options">Rating:</label>
-                            <select id="options" name="options">
-                                <option value="option1">1</option>
+                            <select id="options" name="options"> <!--creates select drop down menu-->
+                                <option value="option1">1</option><!--this are the options in the drop down menu-->
                                 <option value="option2">2</option>
                                 <option value="option3">3</option>
                                 <option value="option4">4</option>
@@ -229,7 +249,7 @@ Date last Modified: 4/12/2025
                             </select> 
                             
 
-                        <button type="submit">Submit</button>
+                        <button type="submit">Submit</button> <!-- jus a regular button to submit the form-->
 
                         </fieldset>
                 
@@ -241,7 +261,7 @@ Date last Modified: 4/12/2025
                 </div>
                 <div class="section-image">
                     
-                    <figure>
+                    <figure> <!-- put a i frame with a youtube video inside a figure with a figcaption-->
                         <iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/8O717cPRcf4?si=3Iv7YC49qW7ZHiFG" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen  title="this video futhermore explaines details of Treaty 1 Manitoba Canada"></iframe>
                         <figcaption><a href="https://youtu.be/8O717cPRcf4" target="_blank">Click To Watch Video Above On Youtube</a></figcaption>
                     </figure>
@@ -251,7 +271,7 @@ Date last Modified: 4/12/2025
     </main>
 
     <div class="footer-container" id="section6">
-        <footer id="footer2" class="footer2"> <!--this footer has nothing in it, its onlt for decoration, this the red strip right above the actual footer -->
+        <footer id="footer2" class="footer2"> <!--this footer has nothing in it, its onlt for decoration, this the red strip right above the actual footer, now also contains an anchor to the next page -->
             <a href="page-2.html" tabindex="6">
                 Discover More
             </a>
