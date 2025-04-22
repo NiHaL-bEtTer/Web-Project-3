@@ -1,3 +1,7 @@
+
+
+
+
 const toggleSwitch = document.getElementById('toggle'); 
 // this finds the html ellement with the id toggle and saves it in a variable
 
